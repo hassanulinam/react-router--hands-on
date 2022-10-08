@@ -7,17 +7,15 @@ const Login = (props: any) => {
   const [previousLocation] = useState<any>(
     props.location?.state?.previousLocation
   );
-
   const { path } = useRouteMatch();
+
   return (
     <div>
       <Switch>
         <Route exact path={`${path}/`}>
           <Redirect to={`${path}/phone-number`} />
         </Route>
-        <Route path={`${path}/phone-number`}>
-          <LoginPhno />
-        </Route>
+        <Route path={`${path}/phone-number`} component={LoginPhno} />
         <Route path={`${path}/verify`}>
           <LoginVerify to={previousLocation || "/"} />
         </Route>

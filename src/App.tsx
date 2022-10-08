@@ -9,9 +9,12 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/login" component={Login} />
-        <ProtectedRoute exact path="/" component={Home} />
-        <ProtectedRoute path="/profile-details" component={ProfileDetails} />
+        <Route path="/login" render={(props: any) => <Login {...props} />} />
+        <ProtectedRoute exact path="/" render={Home} />
+        <ProtectedRoute
+          path="/profile-details"
+          render={() => <ProfileDetails />}
+        />
       </Switch>
     </div>
   );

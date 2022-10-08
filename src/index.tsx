@@ -6,12 +6,10 @@ import { BrowserRouter } from "react-router-dom";
 import ProfileContextProvider from "./context/ProfileContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ProfileContextProvider>
-        <App />
-      </ProfileContextProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <ProfileContextProvider>
+      <App />
+    </ProfileContextProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );

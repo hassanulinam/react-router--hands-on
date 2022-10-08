@@ -6,7 +6,7 @@ const UpdateProfile = () => {
   return (
     <div>
       <h1>Edit Profile</h1>
-      <form>
+      <div>
         <input
           type="text"
           placeholder="Name"
@@ -25,7 +25,7 @@ const UpdateProfile = () => {
           placeholder="occupation"
           onChange={(e) => setOccupation(e.currentTarget.value)}
         />
-      </form>
+      </div>
     </div>
   );
 };
